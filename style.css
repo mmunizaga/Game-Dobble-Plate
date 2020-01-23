@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background-image: url(./assets/blue-background.jpg);
+    background-repeat: no-repeat;
+    color: ivory;
+    height: 100vh;
+
+}
+
+/* start-page */
+.game-title {
+    font-size: 8vw;
+    text-align: center;
+    text-shadow: #797878 10px 0 5px;
+    margin-top: 15vh;
+}
+
+.start-btn {
+    color: ivory;
+    padding: 10px 100px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-image: url(./assets/black-board.jpg);
+    border: none;
+    border-radius: 10px;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.start img {
+    border-radius: 20px;
+    border: 10px solid ivory;
+}
+
+/* instructions-page */
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 5%;
+    color: #28333D;
+    height: 85vh;
+    margin:1% 10%;
+    border:10px solid ivory;
+    border-radius: 3%;
+    background-color: ivory;
+    box-shadow: 10px 10px 10px 5px #797878;
+    contain: content;
+}
+
+.container h1 {
+    font-size: 50px;
+    border-bottom: 3px solid #28333D;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.container p {
+    text-align: center;
+    line-height: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.circles {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 1%;
+}
+
+.circles div{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding: 30%;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #28333D;
+    border-radius: 100%;
+    text-align: center;
+    padding: 30%;
+}
+
+.container img {
+    padding: 4%;
+    border-radius: 70px;
+}
+
+/* game-page */
+
+nav {
+    background-image: url(./assets/black-board.jpg);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn {
+    background-color: transparent;
+    border: 1px solid ivory;
+    color: ivory;
+    padding: 10px;
+    text-decoration: none;
+    color: ivory;
+
+}
+
+.btn a {
+    text-decoration: none;
+    color: ivory;
+}
+
+.card-section {
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-area: auto;
+}
+
+.plate {
+    width: 600px;
+    height: 600px;
+    border-radius: 300px;
+    background-image: url(./assets/plate.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 20px 20px 10px gray;
+    padding: 10%;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    
+}
+
+.cardOne {
+    background-image: url(./assets/numberOne.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.cardTwo {
+    background-image: url(./assets/numberTwo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.join-one {
+    grid-column-start: 2;
+    grid-column-end: 4;}
+
+.join-two {
+    grid-row-start: 1;
+    grid-row-end: 3;}
+
+.card div {
+    max-width: 150%;
+    text-align: center;
+    position: unset;
+}
+
+.game-over {
+    font-size: 200%;
+}
+
+.go-score {
+    color: white;
+    background-color: transparent;
+    border: none;
+    align-content: left;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+    /* Rotation and Size of icons */
+    /* class apply to the img */
+
+/* size: */
+
+.size-one img{
+    width: 100%;
+    margin: -10px;
+    height: auto;
+}
+
+.size-two img{
+    width: 80%;
+    height: auto;
+}
+
+.size-three img{
+    width: 60%;
+    height: auto;
+}
+
+/* rotation: */
+.rotation-one img{
+    transform: rotate(0deg);
+    animation: wobble-hor-bottom 0.8s both;
+    animation-iteration-count: infinite;
+}
+
+.rotation-two img{
+    transform: rotate(45deg);
+    animation: rotate-scale-up 0.90s linear both;
+    animation-iteration-count: infinite;
+}
+
+.rotation-three img{
+    transform: rotate(90deg);
+    animation: shake 0.5s;
+    animation: wobble-hor-bottom 0.8s both;
+    animation-iteration-count: infinite;
+}
+
+.rotation-four img{
+    transform: rotate(135deg);
+    animation: rotate-center 0.6s ease-in-out both;
+    animation-iteration-count: infinite;
+}
+
+.rotation-five img{
+    transform: rotate(180deg);
+    animation: wobble-hor-bottom 0.8s both;
+    animation-iteration-count: infinite;
+}
+
+.rotation-six img{
+    transform: rotate(225deg);
+    animation: rotate-scale-up 0.90s linear both;
+    animation-iteration-count: infinite;
+}
+
+.rotation-seven img{
+    transform: rotate(270deg);
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.rotation-eight img{
+    transform: rotate(315deg);
+    animation: rotate-center 0.6s ease-in-out both;
+    animation-iteration-count: infinite;
+}
+
+/* animations */
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  @-webkit-keyframes rotate-scale-up {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+              transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateZ(180deg);
+              transform: scale(2) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+              transform: scale(1) rotateZ(360deg);
+    }
+  }
+
+  @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+
+
+/* scores-page */
+
+.scores {
+    display: grid;
+    margin: 20px;
+    grid-gap: 5vh;
+    width: auto;
+}
+
+.scores div {
+    display: grid;
+    align-items: center;
+    align-content: space-around;
+    background-image: url(./assets/black-board.jpg);
+    background-size: cover;
+    text-align: center;
+    margin: 0 15vw;
+    border-radius: 40px;
+}
+
+.scores div h2 {
+    font-size: 5vw;
+    padding: 20px;
+}
+
+.scores div span {
+    font-size: 10vw;
+    padding: 20px;
+}
+
+.btn-play-again {
+    color: ivory;
+    border: 2px solid ivory;
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+}
