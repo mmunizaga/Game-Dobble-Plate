@@ -60,28 +60,26 @@ body {
     border-radius: 3%;
     background-color: ivory;
     box-shadow: 10px 10px 10px 5px #797878;
-    contain: content;
 }
 
 .container h1 {
-    font-size: 50px;
-    border-bottom: 3px solid #28333D;
+    font-size: 45px;
     padding: 0;
-    margin: 0;
-    margin-bottom: 20px;
 }
 
 .container p {
     text-align: center;
-    line-height: 40px;
+    line-height: 25px;
     padding-left: 10%;
     padding-right: 10%;
+    font-size: 15px;
 }
 
 .circles {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin-top: 1%;
+    margin-bottom: 0;
 }
 
 .circles div{
@@ -89,6 +87,7 @@ body {
     height: 80px;
     text-align: center;
     padding: 30%;
+    margin-bottom: 0;
 }
 
 .circle {
@@ -97,12 +96,28 @@ body {
     border: 3px solid #28333D;
     border-radius: 100%;
     text-align: center;
-    padding: 30%;
 }
 
 .container img {
-    padding: 4%;
-    border-radius: 70px;
+    margin: 1%;
+    border-radius: 10%;
+}
+
+@media only screen and (max-width:700px){
+    .container img {
+        height: 25vh;
+        padding: 4%;
+        border-radius: 15%;
+    }
+
+    .container h1 {
+        font-size: 25px;
+        margin-bottom: 5%;
+    }
+
+    body {
+        overflow: visible;
+    }
 }
 
 /* game-page */
@@ -153,17 +168,6 @@ nav {
     background-size: contain;
     box-shadow: 20px 20px 10px gray;
     padding: 10%;
-}
-
-@media only screen and (max-width:700px){
-    .card-section {
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
-    }
-
-    .plate {
-        padding: 5%;
-    }
 }
 
 .card {
@@ -219,6 +223,50 @@ nav {
 
 nav a{
     text-decoration: none;
+}
+
+@media only screen and (max-width:700px){
+    .card-section {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .plate {
+        padding: 5%;
+    }
+
+    .nav {
+        font-size: 15px;
+    }
+
+    .btn {
+        font-size: 15px;
+    }
+
+    .time {
+        font-size: 15px;
+    }
+
+    .time span {
+        font-size: 15px;
+    }
+
+    .score {
+        font-size: 15px;
+    }
+
+    .score span {
+        font-size: 15px;
+    }
+
+    .lifes {
+        font-size: 15px;
+    }
+
+    .lifes span{
+        font-size: 15px;
+    }
+    
 }
 
     /* Rotation and Size of icons */
@@ -402,6 +450,7 @@ nav a{
     border-radius: 10px;
     padding: 10px;
     width: 30%;
+    text-align: center;
 }
 
 @media only screen and (max-width:700px){
@@ -414,5 +463,11 @@ nav a{
     .scores div {
         margin: 10%;
         width: 80%;
+    }
+}
+
+@media only screen and (max-height:600px){
+    body {
+        overflow: visible;
     }
 }
