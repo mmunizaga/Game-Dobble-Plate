@@ -11,7 +11,7 @@ body {
     background-repeat: no-repeat;
     color: ivory;
     height: 100vh;
-
+    overflow: hidden;
 }
 
 /* start-page */
@@ -143,15 +143,27 @@ nav {
     grid-area: auto;
 }
 
+
 .plate {
-    width: 600px;
-    height: 600px;
-    border-radius: 300px;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 100%;
     background-image: url(./assets/plate.png);
     background-repeat: no-repeat;
     background-size: contain;
     box-shadow: 20px 20px 10px gray;
     padding: 10%;
+}
+
+@media only screen and (max-width:700px){
+    .card-section {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .plate {
+        padding: 5%;
+    }
 }
 
 .card {
@@ -215,18 +227,18 @@ nav a{
 /* size: */
 
 .size-one img{
-    width: 100%;
+    width: 90%;
     margin: -10px;
     height: auto;
 }
 
 .size-two img{
-    width: 80%;
+    width: 70%;
     height: auto;
 }
 
 .size-three img{
-    width: 60%;
+    width: 50%;
     height: auto;
 }
 
@@ -357,20 +369,21 @@ nav a{
 
 .scores {
     display: grid;
-    margin: 20px;
-    grid-gap: 5vh;
-    width: auto;
+    grid-gap: 5%;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
 }
 
 .scores div {
     display: grid;
     align-items: center;
     align-content: space-around;
+    width: 90%;
     background-image: url(./assets/black-board.jpg);
     background-size: cover;
     text-align: center;
-    margin: 0 15vw;
     border-radius: 40px;
+    margin: 5%;
 }
 
 .scores div h2 {
@@ -389,4 +402,17 @@ nav a{
     border-radius: 10px;
     padding: 10px;
     width: 30%;
+}
+
+@media only screen and (max-width:700px){
+    .scores {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+
+    .scores div {
+        margin: 10%;
+        width: 80%;
+    }
 }
